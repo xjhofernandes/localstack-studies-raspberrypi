@@ -6,27 +6,27 @@ In this repository, I'll emulate some AWS features using localstack and Raspberr
 
 I hope it'll help some other people who wants to emulate the **BIG** AWS cloud in our **TINY** raspberry computers 🍒. 😁
 
-##### Requirements
+##### :wrench: Requirements :wrench:
 
 Technologies:
 * [Localstack](https://www.localstack.cloud/);
 * [Docker](https://www.docker.com/);
 * [Python](https://www.python.org/);
 
-Important Libraries from Localstack:
-* [awscli-local](https://github.com/localstack/awscli-local)
 
-How to install:
+Important Libraries from Localstack Company:
+
+To use AWS and Terraform I'll recommend the libraries from localstack Company. They are:
+
+* [awscli-local](https://github.com/localstack/awscli-local)
+* [terraform-local](https://github.com/localstack/terraform-local)
+
+You can install both using the commands bellow:
 ```
 pip install awscli-local
-```
-
-* [terraform-local](https://github.com/localstack/terraform-local)
-How to install:
-
-```
 pip install terraform-local
 ```
+
 
 ## :warning: System Requirements
 
