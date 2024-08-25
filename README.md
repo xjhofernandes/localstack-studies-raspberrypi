@@ -4,9 +4,9 @@
 
 In this repository, I'll emulate some AWS features using localstack and Raspberry Pi 5.
 
-I hope it'll help some other people who wants to emulate the **BIG** AWS cloud in our **TINY** raspberry computers 🍒. 😁
+I hope it'll help some other people who wants to emulate the "**BIG**" AWS cloud in our "**TINY**" Raspberry computers 🍒. 😁
 
-##### :wrench: Requirements :wrench:
+##### :wrench: Requirements
 
 Technologies:
 * [Localstack](https://www.localstack.cloud/);
