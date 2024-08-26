@@ -4,6 +4,12 @@
 2. AWS ECR Image (with the Lambda code version, eg: variable **function_version**);
 3. AWS Lambda with containers compatibility already using the ECR image;
 
+### 📘 Project Diagram
+
+You can check the diagram below to understand more about what this terraform + localstack project is for.
+
+![Alt text](img/diagram.png)
+
 ### 🌍 Terraform Local
 
 First, you'll need use the infrastructure folder
@@ -32,7 +38,7 @@ tflocal destroy -var-file="values.tfvars"
 
 ### λ Local AWS Lambda Invokes
 
-Invoking local lambda with awslocal
+Invoking local Lambda functions with awslocal for testing purposes.
 
 ```bash
 awslocal lambda invoke --function-name hello-world --payload '' output.txt
