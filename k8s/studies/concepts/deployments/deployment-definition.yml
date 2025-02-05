@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment # The new way to create replicas on K8s
+
+metadata:
+  name: myapp-deployment
+  labels:
+    app: nginx
+    tier: frontend
+
+spec:
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: "1"
+
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend

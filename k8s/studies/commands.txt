@@ -1,0 +1,27 @@
+# Create the k8s with the definition file
+kubectl create -f replicaset-definition.yml
+
+# Delete the k8s with the definition file
+kubectl delete -f replicaset-definition.yml
+
+# Replace the k8s with the definition file
+kubectl replace -f replicaset-definition.yml
+
+# Get Pods
+kubectl get pods
+
+# Delete a Pod
+kubectl delete pod Pod-Name
+
+# Edit a Replica Set
+kubectl edit replicaset replicaset-name
+
+# Scale a Replica Set
+kubectl scale replicaset replicaset-name --replicas=3 
+
+# Describe a Replica Set
+kubectl describe replicaset replicaset-name
+
+# Get Replica Set
+kubectl get replicaset
+
