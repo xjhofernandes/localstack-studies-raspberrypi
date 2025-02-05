@@ -25,3 +25,17 @@ kubectl describe replicaset replicaset-name
 # Get Replica Set
 kubectl get replicaset
 
+# Get Status of Deployment
+kubectl rollout status deployment/myapp-deployment
+
+# Get History of Deployment
+kubectl rollout history deployment/myapp-deployment
+
+# Rollback
+kubectl rollout undo deployment/myapp-deployment
+
+# Record Option
+kubectl create -f deployment-definition-update-rollback.yml --record
+
+# set image deployment
+kubectl set image deployment myapp-deployment nginx=nginx:1.27 --record
