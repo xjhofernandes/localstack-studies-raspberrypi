@@ -1,2 +1,8 @@
 I'm using the k3d on my Raspberry PI 5
 Url from K3d: https://k3d.io/stable/
+
+
+# Creating via NodePort Local Cluster
+k3d cluster create mycluster -p "8082:30080@agent:0" --agents 2
+
+Documentation: https://k3d.io/v5.4.3/usage/exposing_services/

@@ -39,3 +39,7 @@ kubectl create -f deployment-definition-update-rollback.yml --record
 
 # set image deployment
 kubectl set image deployment myapp-deployment nginx=nginx:1.27 --record
+
+
+# Reduce the number of lines in the prompt
+PROMPT_DIRTRIM=1
