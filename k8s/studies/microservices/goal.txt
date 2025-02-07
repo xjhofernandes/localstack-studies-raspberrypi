@@ -1,0 +1,27 @@
+## Before create pod and services. We need to expose the ports from k3d cluster.
+k3d cluster create mycluster -p "8082:30004@agent:0" -p "8083:30005@agent:0" --agents 2
+
+k3d cluster create mycluster --agents 1 -p "8015-8016:30004-30005@server:0"
+
+Goals:
+1. Deploy Containers
+2. Enable Connectivity
+3. External Access
+
+
+Steps:
+1. Deploy Pods
+2. Create Services (ClusterIp)
+  1. Redis
+  2. DB
+3. Create Services (NodePort)
+  1. Voting-app
+  2. Result-app
+
+
+# Images on Dockerhub
+voting app: kodekloud/examplevotingapp_vote:v1
+result app: kodekloud/examplevotingapp_result:v1
+worker: kodekloud/examplevotingapp_worker:v1
+redis: redis
+db: postgres
