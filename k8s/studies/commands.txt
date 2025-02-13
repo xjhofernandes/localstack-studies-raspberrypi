@@ -43,3 +43,6 @@ kubectl set image deployment myapp-deployment nginx=nginx:1.27 --record
 
 # Reduce the number of lines in the prompt
 PROMPT_DIRTRIM=1
+
+# Get Logs
+kubectl logs pod/result-app-pod
