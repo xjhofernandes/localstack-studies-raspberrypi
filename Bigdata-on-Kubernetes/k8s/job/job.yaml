@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dataprocessingjob
+
+spec:
+  template:
+    spec:
+      containers:
+      - name: dataprocessingjob
+        image: jhofernandes/dataprocessingjob:v1
+      restartPolicy: Never
+  backoffLimit: 4

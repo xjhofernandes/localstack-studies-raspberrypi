@@ -1,7 +1,7 @@
 ## Before create pod and services. We need to expose the ports from k3d cluster.
 k3d cluster create mycluster -p "8082:30004@agent:0" -p "8083:30005@agent:0" --agents 1
 
-# Create a new cluster with two exposed ports
+# Create a new cluster with two exposed ports (ranged)
 k3d cluster create mycluster --agents 1 -p "8015-8016:30004-30005@server:0"
 
 # Delete Cluster
