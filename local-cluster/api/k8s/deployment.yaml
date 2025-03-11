@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-api-dev
+  labels:
+    app: local-api
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: local-api
+  template:
+    metadata:
+      labels:
+        app: local-api
+    spec:
+      containers:
+        - name: localapi
+          image: jhofernandes/simpleapi
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+
+          readinessProbe:
+            httpGet:
+              path: "/health"  # Change this to a real health endpoint if available
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: "/health"  # Same as readinessProbe or use a dedicated /health route
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
